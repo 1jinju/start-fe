@@ -3,22 +3,17 @@ const id = "hello";
 const pw = 'world';
 
 function submit(){
-    document.getElementById('form').addEventListener('submit', function(event) {
+    document.querySelector('#form').addEventListener('submit', function(event) {
         // 페이지 새로고침 방지
         event.preventDefault(); 
         
-        let $inputId = document.getElementsByName('id')[0].value;
-        let $inputPw = document.getElementsByName('pw')[0].value;
+        let $inputId = document.querySelector('input[name="id"]').value;
+        let $inputPw = document.querySelector('input[name="pw"]').value;
         let $result = document.getElementById('result');
-    
-        if ($inputId === id && $inputPw === pw) {
-            $result.textContent = 'success';
-            $result.className = 'success';
-        }
-        else {
-            $result.textContent = 'error';
-            $result.className = 'error';
-        }
+        
+        const result = ($inputId === id && $inputPw === pw) ? 'success' : 'error';
+        $result.textContent = result;
+        $result.className = result;
     });
 }
 
