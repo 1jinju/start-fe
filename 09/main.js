@@ -23,3 +23,23 @@ const { $wrapper: $countWrapper, setText: setCount } = Wrapper({
 });
 
 $root.append($countWrapper, $plusButton, $minusButton);
+
+
+// const countEl = document.querySelector('.count');
+// const plusBtn = document.querySelector('#plusBtn');
+// const minusBtn = document.querySelector('#minusBtn');
+
+// let count = parseInt(countEl.textContent);
+
+// function plus() {
+//     count++;
+//     countEl.textContent = count.toString();
+// }
+
+// function minus() {
+//     count--;
+//     countEl.textContent = count.toString();
+// }
+
+// plusBtn.addEventListener('click', plus);
+// minusBtn.addEventListener('click', minus);
